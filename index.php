@@ -5,50 +5,26 @@
     <title>Document</title>
 </head>
 <body>
-<form action="index.php" method="get">
-    <input type="number" placeholder="number-01" name="num1"> <br><br>
-    <select name="oper">
-        choose operation : 
-        <option name="add">Add (+)</option>
-        <option name="sub">substract (-)</option>
-        <option name="multi">multifly (*)</option>
-        <option name="divide">divided (/)</option>
-    </select> <br><br>
-    <input type="number" placeholder="number-02" name="num2"><br><br>
-    <button name="submit">calculate</button>
-</form>    
+    <div class="container">
+        <h1>Registration form</h1>
+        <form action="index.php" method="post">
+            First Name : <input type="text" placeholder="Your Name" name="firstname"> <br><br>
+             Last Name : <input type="text" placeholder="Your lastName" name="lastname"> <br> <br>
+              Email : <input type="text" placeholder="Your Email" name="email"><br> <br>
+               Contact No : <input type="number" placeholder="Your Contact Number" name="contact"> <br><br>
+               Password : <input type="password" placeholder="Password" name="password"><br><br>
 
-<?php
-if (isset ($_GET["submit"])){
-    $num1 = $_GET["num1"];
-    $num2 = $_GET["num2"];
-    $opp = $_GET["oper"];
-    $add = $_GET["add"];
-    $sub = $_GET["sub"];
-    $multi = $_GET["multi"];
-    $divide = $_GET["divide"];
-    $result;
+            <input type="submit" name="submit">
+        </form>
+    </div>
 
+    <div>
+        <?php
 
-    if ($opp == null && strlen($opp) == 0){
-        echo "Enter the operation..";
-    }
-    elseif($opp == $add){
-        $result = $num1 + $num2;
-        echo $result;
-    }
-    elseif($opp == $sub){
-        $result = $num1 - $num2;
-        echo $result;
-    }
-    elseif($opp == $multi){
-        $result = $num1 * $num2;
-        echo $result;
-    }
-    
-}
-
-
-?>
+        if(isset($_POST["submit"])){
+            echo "User Submit..";
+        }
+        ?>
+    </div>
 </body>
 </html>
