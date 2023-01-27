@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Dinamic Form Creation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navigation-bar">
+        <div class="logo-img">
+            <img id="img" src="logo.png" alt="logo/png">
+           <div class="logoss">
+            <p id="logo">Vueform</p>
+            <small id="logoblw">BUILDER</small>
+        </div>
+        </div>
+
+        <div class="navigation">
+            <ul>
+                <li class="active" >Get a License</li>
+                <li class="active">Load Tempalte</li>
+                <li class="active">Save Template</li>
+                <li class="active">About</li>
+            </ul>
+        
+        </div>
+    </div> 
+    
+    <div><hr></div>
+
+    <div class="container">
+        <div class="box1">
+            <div class="element-tree">
+                <button class="tablinks" onclick="openCity(event, 'element')">Elements</button>
+                <button class="tablinks" onclick="openCity(event, 'trees')">trees</button>
+        </div>
+        <!-- ================================================= -->
+        <div id="element" class="tabcontent">
+            <input id="search-element" type="text" placeholder="Search Elements">
+               
+            <div class="field-static-structure">
+                <button class="fields">Fields</button>
+                <button class="statics">Statics</button>
+                <button class="structure">Structure</button>
+            </div>
+        
+            <div class="field1">
+                <p id="head">Text Input</p>
+                <p id="para">Single line input text</p>
+            </div>
+            <div class="field2">
+                <p id="head">Number Input</p>
+                <p id="para">that only allows numbers</p>
+            </div>
+            <div class="field3">
+                <p id="head">Phone Number</p>
+                <p id="para">Text field that expects a phone number</p>
+            </div>
+            <div class="field4">
+                <p id="head">Password</p>
+                <p id="para">Text field that expects a password</p>
+            </div>
+
+            <div id="trees" class="tabcontent">
+                <h1>hi</h1>
+                </div>
+            
+        </div>
+        
+    </div>
+
+
+
+        <div class="box2">
+            <h1>ddfk</h1>
+        </div>
+
+
+
+        <div class="box3">
+                 <h1>ddfk</h1>
+         </div>
+
+    </div>
+
+
+<script>
+    function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+
+
+
+</body>
+</html>
