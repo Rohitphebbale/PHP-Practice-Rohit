@@ -1,211 +1,263 @@
-.navigation-bar{
+.navbar{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-#img{
-    height: 140px;
-    width: 140px;
-    margin: 10px 0 10px 10px; 
-    float: left;
+.logo-img{
+    display: flex;
+    flex-direction: row;
 }
-.logoss{
+.logo{
     display: flex;
     flex-direction: column;
 }
-#logo{
-    font-size: 50px;
-    display: flex;
+#img{
+    float: left;
+    height: 140px;
+    width: 140px;
+   
+}
+#vueform{
     font-family: monospace;
-    
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(5, 5, 5);
+    margin-top: 40px;
 }
-#logoblw{
-    font-size: 25px;
-    color: rgb(176, 173, 173);
-    margin-top: -55px;
-    margin-left: 70px;
+#builder{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(88, 88, 88);
+    margin-left: 40px;
+    margin-top: -40px;
 }
-
-
-ul {
+ul{
     list-style-type: none;
     margin-right: 140px;
-    padding: 0;
-    overflow: hidden;
-    border: 1px solid #e7e7e7;
-    background-color:white;
-    border-style: none;
-  }
-  
-  li {
-    float: right;
-  }
-
-  .active{
-    font-size: 30px;
-    margin: 20px    ;
-    border: 1px solid whitesmoke;
-    padding: 15px 30px;
-    border-radius: 40px;
-    background-color: whitesmoke;
-  }
-  .active:hover{
-    cursor: pointer;
-    background-color: rgb(211, 209, 209);
-  }
-  .container{
-    display: grid;
-    grid-template-columns: 23% auto 23%;
-    grid-template-rows: auto auto auto;
-    grid-gap: 20px;
-  }
-  .box1{
-    background-color: white;
-  }
-  .box2{
-    background-color: antiquewhite;
-  }
-  .box3{
-    background-color: antiquewhite;
-  }
-
-  .element-tree{
-    display: flex;
-    overflow: hidden;
-
-  }
-  .element-tree button{
+    background-color: rgb(28, 24, 24);
+    border: 1px solid white;
+}
+li{
     float: left;
-  }
-  .tablinks{
-    font-size: 25px;
-    padding: 20px;
-    margin: 0px 0px 0px 0px;
-    width: 50%;
-    background-color: whitesmoke;
-    border-style: none;
-    border-radius: 20px;
-  }
-  /* .tree{
-    font-size: 25px;
-    padding: 20px;
-    margin: 0px 0px 0px 0px;
-    width: 50%;
-    background-color: whitesmoke;
-    border-style: none;
-  }
-  .elements:hover{
-    cursor: pointer;
-    background-color: white;
-    border-style: none;
-  } */
-  .tablinks:hover{
-    cursor: pointer;
-    background-color: white;
-    border-style: none;
-  }
-  #search-element{
-    margin: 20px;
-    height: 60px;
-    width: 90%;
-    padding-left: 20px;
-    font-size: 20px;
-    border-radius: 10px;
-    font-size: 27px;
-    background-color: whitesmoke;
-    border-style: none;
-  }
-  .field-static-structure{
-    display: flex;
-    margin: 10px 20px;
-  }
-  .fields{
-width: 33%;
-height: 50px;
-padding: 10px 20px;
-background-color: white;
-border-top-left-radius: 10px;
-border-bottom-left-radius: 10px;
-font-size: 23px;
-border-color: whitesmoke;
-  }
-  .statics{
-    width: 33%;
-    height: 50px;
-    padding: 10px 20px;
-    background-color: white;
-    font-size: 23px;
-    border-color: whitesmoke;
-  }
-  .structure{
-    width: 33%;
-    height: 50px;
-    padding: 10px 20px;
-    background-color: white;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    font-size: 23px;
-    border-color: whitesmoke;
-  }
-  .fields:hover{
-    cursor: pointer;
-    background-color: whitesmoke;
-  }
-  .statics:hover{
-    cursor: pointer;
-    background-color: whitesmoke;
-  }
-  .structure:hover{
-    cursor: pointer;
-    background-color: whitesmoke;
-  }
-
-  .field1{
-    padding: 10px 0px;
-  }
-  .field2{
-    padding: 10px 0px;
-  }
-  .field3{
-    padding: 10px 0px;
-  }
-  .field4{
-    padding: 10px 0px;
-  }
-  #head{
-    font-size: 35px;
-    font-weight: bold;
-    color: rgb(15, 3, 3);
-    margin-left: 150px;
-  }
-  #para{
+}
+.active{
     font-size: 30px;
-    font-weight: lighter;
-    color: rgb(203, 200, 200);
-    margin-left: 150px;
-    margin-top: -25px;
-  }
-  .field1:hover{
-    cursor: pointer;
+    margin: 0px 20px;
     background-color: whitesmoke;
-    border-radius: 20px;
-  }
-  .field2:hover{
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.active:hover{
     cursor: pointer;
-    background-color: whitesmoke;
-    border-radius: 20px;
-  }
-  .field3:hover{
+    background-color: white;
+}
+
+/* ============================================ */
+
+.container{
+    display: grid;
+    grid-template-columns: 24% auto 24%;
+    /* grid-template-rows: auto auto auto; */
+    grid-gap: 10px;
+    flex-direction: column;
+}
+
+.section1{
+    background-color: bisque;
+}
+.section2{
+    background-color: bisque;
+}
+.section3{
+    background-color: bisque;
+}
+
+
+/* =============================================== */
+
+.hero{
+    width: 100%;
+    height: 950px;
+    position: relative;
+    overflow: hidden;
+}
+.btn-box{
+    display: flex;
+   
+}
+.btn-box button{
     cursor: pointer;
-    background-color: whitesmoke;
-    border-radius: 20px;
-  }
-  .field4:hover{
-    cursor: pointer;
-    background-color: whitesmoke;
-    border-radius: 20px;
-  }
-  .tabcontent{
+  
+}
+.content{
+    width: 100%;
     display: none;
+    position: relative;    
+    transform: translateX(100%);
+}
+
+#content1{
+    transform: translateX(0px);
+}
+.element-containt{
+    width: 100%;
+}
+#element-btn{
+height: 65px;
+width: 48.5%;
+font-size: 30px;
+background-color: whitesmoke;
+border-style: none;
+margin-left: 5px;
+margin-top: 5px;
+cursor: pointer;
+
+}
+
+#trees-btn{
+    height: 65px;
+    width: 48.5%;
+    font-size: 30px;
+    background-color: whitesmoke;
+    border-style: none;
+    margin-right: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+#search-element{
+    width: 88%;
+    margin: 15px;
+    height: 65px;
+    font-size: 30px;
+    border-style: none;
+    background-color: whitesmoke;
+    padding: 0 20px;
+    border-radius: 15px;
+}
+#search-tree{
+    width: 88%;
+    margin : 15px;
+    height: 65px;
+    font-size: 30px;
+    border-style: none;
+    background-color: whitesmoke;
+    padding: 0 20px;
+    border-radius: 15px;
+}
+
+/* ================== */
+.heroo{
+    width: 100%;
+    height: auto;
+    /* position: relative; */
+    position: absolute;
+    overflow: hidden;
+    margin-top: 95px;
+
+}
+.btnbox-blw{
+    display: flex;
+    margin: 10px;
     
-  }
+}
+.field-content{
+
+    width: 100%;
+    display: none;
+    position: relative;    
+    transform: translateX(100%);  
+}
+#content1-blw{
+    transform: translateX(0px);
+}
+.containt-blw{
+    width: 100%;
+}
+/* ===================== */
+
+#field-btn{
+    width: 33%;
+    height: 65px;
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    background-color: white;
+    font-weight: 30px;
+    font-size: 25px;
+}
+#static-btn{
+    width: 33%;
+    height: 65px;
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    background-color: white;
+    font-weight: 30px;
+    font-size: 25px;
+}
+#structure-btn{
+    width: 33%;
+    height: 65px;
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    background-color: white;
+    font-weight: 30px;
+    font-size: 25px;
+}
+.matter{
+background-color: whitesmoke;
+margin-top: -25px;
+width: 100%;
+padding-right: 20px;
+margin-left: 20px;
+}
+.matter:hover{
+background-color: white;
+}
+#heading{
+    width: 100%;
+font-size: 25px;
+font-weight: bold;
+font-family: monospace;
+color: black;
+margin-left: 100px;
+
+padding-top: 30px;
+}
+#para{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: monospace;
+color: rgb(71, 69, 69);
+margin-left: 100px;
+margin-top: -25px;
+padding-bottom: 30px;
+}
+.matters{
+    background-color: whitesmoke;
+    margin-top: -25px;
+    width: 92%;
+    padding-right: 0px;
+    margin-left: -590px;
+    margin-top: 100px;
+    }
+    .matters:hover{
+    background-color: white;
+    }
+    #headings{
+    width: 70%;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: monospace;
+    color: black;
+    margin-left: 100px;
+    padding-top: 30px;
+    }
+
+    #div2{
+        width: 97%;
+        height: 900px;
+        border: 1px solid black;
+        margin: 15px;
+    }

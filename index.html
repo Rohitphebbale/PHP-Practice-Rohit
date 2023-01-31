@@ -1,107 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
-    <title>Dinamic Form Creation</title>
+    
+    
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navigation-bar">
-        <div class="logo-img">
-            <img id="img" src="logo.png" alt="logo/png">
-           <div class="logoss">
-            <p id="logo">Vueform</p>
-            <small id="logoblw">BUILDER</small>
-        </div>
-        </div>
+    <div class="page">
 
-        <div class="navigation">
-            <ul>
-                <li class="active" >Get a License</li>
-                <li class="active">Load Tempalte</li>
-                <li class="active">Save Template</li>
-                <li class="active">About</li>
-            </ul>
-        
-        </div>
-    </div> 
-    
-    <div><hr></div>
+        <div class="navbar">
 
-    <div class="container">
-        <div class="box1">
-            <div class="element-tree">
-                <button class="tablinks" onclick="openCity(event, 'element')">Elements</button>
-                <button class="tablinks" onclick="openCity(event, 'trees')">trees</button>
-        </div>
-        <!-- ================================================= -->
-        <div id="element" class="tabcontent">
-            <input id="search-element" type="text" placeholder="Search Elements">
-               
-            <div class="field-static-structure">
-                <button class="fields">Fields</button>
-                <button class="statics">Statics</button>
-                <button class="structure">Structure</button>
-            </div>
-        
-            <div class="field1">
-                <p id="head">Text Input</p>
-                <p id="para">Single line input text</p>
-            </div>
-            <div class="field2">
-                <p id="head">Number Input</p>
-                <p id="para">that only allows numbers</p>
-            </div>
-            <div class="field3">
-                <p id="head">Phone Number</p>
-                <p id="para">Text field that expects a phone number</p>
-            </div>
-            <div class="field4">
-                <p id="head">Password</p>
-                <p id="para">Text field that expects a password</p>
-            </div>
-
-            <div id="trees" class="tabcontent">
-                <h1>hi</h1>
+            <div class="log-img">
+                <img id="img" src="logo.png" alt="logo/png">
+                <div class="logo">
+                    <p id="vueform">Vueform</p>
+                    <p id="builder">BUILDER</p>
                 </div>
-            
-        </div>
-        
+             </div>
+
+             <div class="navigation">
+                <ul>
+                    <li class="active">About</li>
+                    <li class="active">Save Templates</li>
+                    <li class="active">Load Templates</li>
+                    <li class="active">Get a License</li>
+                </ul>
+             </div>
+     </div> 
+            <hr>
+
+            <div class="container">
+
+                    <div class="section1">
+
+                        <div class="hero">
+                            <div class="btnbox">
+                            <button id="element-btn" onclick="element()">Elements</button>
+                            <button id="trees-btn" onclick="tree()">Trees</button>
+                            </div>
+
+                            <div class="content" id="content1">
+                                    <div class="element-containt">    
+                                        <input id="search-element" type="text" placeholder="serch for elements">
+                                        </div> 
+                                        <!-- ---------------------- -->
+                                    <div class="heroo">
+                                                <div class="btnbox-blw">
+                                                    <button id="field-btn" onclick="fieldsss()">field</button>
+                                                    <button id="static-btn" onclick="staticsss()">Static</button>
+                                                    <button id="structure-btn" onclick="structuresss()">Structure</button>
+                                                </div>
+
+                                                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">  
+                                                </div>
+                                                    <div class="field-content" id="content1-blw"   draggable="true" ondragstart="drag(event)" id="drag1">
+                                                        <div class="content-blw">
+                                                        <div class="matter">
+                                                            <p id="heading">Text input</p>
+                                                            <p id="para">Single line text input</p>
+                                                        </div>
+                                                        <div class="matter">
+                                                            <p id="heading">Number input</p>
+                                                            <p id="para">input fild that only allows numberes</p>
+                                                        </div>
+                                                        <div class="matter">
+                                                            <p id="heading">Email Adress</p>
+                                                            <p id="para">Text field that expext only emails</p>
+                                                        </div>
+                                                        <div class="matter">
+                                                            <p id="heading">Phone Number</p>
+                                                            <p id="para">input fild that only allows numberes</p>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">  
+                                                    </div>
+                                                    <div class="field-content" id="content2-blw"   draggable="true" ondragstart="drag(event)" id="drag1">
+                                                        <div class="content-blw">
+                                                        <div class="matter">
+                                                            <p id="heading">submit button</p>
+                                                            <p id="para">button that trigger submit</p>
+                                                        </div>
+                                                        <div class="matter">
+                                                            <p id="heading">Reset button</p>
+                                                            <p id="para">button that trigger submit</p>
+                                                        </div>
+                                                        <div class="matter">
+                                                            <p id="heading">primary button</p>
+                                                            <p id="para">button with primary color</p>
+                                                        </div>
+                                                        <div class="matter">
+                                                            <p id="heading">Secondary Button</p>
+                                                            <p id="para">button with secondary color</p>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+
+                                            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">  
+                                                </div>
+                                                    <div class="field-content" id="content3-blw" draggable="true" ondragstart="drag(event)" id="drag1">
+                                                        <div class="content-blw">
+                                                        <div class="matter">
+                                                            <p id="heading">Tab</p>
+                                                            <p id="para">break forms into tabs</p>
+                                                        </div>
+                                                        <div class="matter">
+                                                            <p id="heading">Step</p>
+                                                            <p id="para">break forms into steps</p>
+                                                        </div>
+                                                        <div class="matter">
+                                                            <p id="heading">Button 1</p>
+                                                            <p id="para">one coloumn each other</p>
+                                                        </div>
+                                                        <div class="matter">
+                                                            <p id="heading">Button 2</p>
+                                                            <p id="para">two colomn to each other</p>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+
+                                     </div>
+
+
+                                        <!-- -------------------------- -->
+                                        
+                        
+                            
+
+                            <div class="content" id="content2">
+                                <div class="element-containt">
+                                    <input id="search-tree"  type="text" placeholder="serch for trees">
+                                    </div>
+
+
+                                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">  
+                                      </div>
+                                    <div class="matters">
+                                        <p id="headings"  draggable="true" ondragstart="drag(event)" id="drag1">My forms</p>    
+                                    </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="section2">
+                        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                    </div>
+
+                    <div class="section3">
+                        <h1>sdf</h1>
+
+                    </div>
+
+                    </div>
+
+
+
+            </div>
+
+
+
     </div>
 
 
 
-        <div class="box2">
-            <h1>ddfk</h1>
-        </div>
+    <script>
+  var content1 = document.getElementById("content1");
+var content2 = document.getElementById("content2");
+var elements = document.getElementById("element-btn");
+var treess = document.getElementById("trees-btn");
+var fieldss = document.getElementById("field-btn");
+var statics = document.getElementById("static-btn");
+var structurs = document.getElementById("structure-btn");
+var content1s = document.getElementById("content1-blw");
+var content2s = document.getElementById("content2-blw");
+var content3s = document.getElementById("content3-blw");
 
 
-
-        <div class="box3">
-                 <h1>ddfk</h1>
-         </div>
-
-    </div>
-
-
-<script>
-    function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
+function element(){
+    content1.style.transform = "translateX(0)";
+    content2.style.transform = "translateX(100%)";  
+    content1.style.display = "flex"; 
+    content2.style.display = "none";                        
 }
-</script>
+
+function tree(){
+    content1.style.transform = "translateX(100%)";
+    content2.style.transform = "translateX(0)"; 
+    content2.style.display = "flex"; 
+    content1.style.display = "none";                  
+}
+function fieldsss(){
+content1s.style.transform = "translateX(0)";
+content2s.style.transform = "translateX(100%)";
+content3s.style.transform = "translateX(100%)";
+content1s.style.display = "flex";
+content2s.style.display = "none";
+content3s.style.display = "none";
+    }
+
+    function staticsss(){
+ content1s.style.transform = "translateX(100%)";
+content2s.style.transform = "translateX(0)";
+content3s.style.transform = "translateX(100%)";
+content2s.style.display = "flex";
+content1s.style.display = "none";
+content3s.style.display = "none";
+  }
+
+    function structuresss(){
+ content1s.style.transform = "translateX(100%)";
+content2s.style.transform = "translateX(100%)";
+content3s.style.transform = "translateX(0)";
+content3s.style.display = "flex";
+content2s.style.display = "none";
+content1s.style.display = "none";
+    }
+    function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
 
 
-
-
+    </script>
 </body>
 </html>
